@@ -1,7 +1,12 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: './src/index.ts',
+	target: 'electron-main',
+	entry: {
+		index: './src/index.tsx',
+		main: './src/main.ts',
+	},
 	devtool: 'inline-source-map',
 	module: {
 		rules: [
@@ -10,13 +15,31 @@ module.exports = {
 				use: 'ts-loader',
 				exclude: /node_modules/,
 			},
+			{
+				test: /\.css$/,
+				use: [
+					'style-loader',
+					'css-loader',
+				],
+			},
 		],
 	},
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js'],
+		fallback: {
+			'fs': false,
+		},
+		modules: [path.resolve('./src'), 'node_modules'],
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: 'Train Schedule',
+			chunks: ['index'],
+		}),
+	],
 	output: {
-		filename: 'bundle.js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist'),
+		clean: true,
 	},
 };

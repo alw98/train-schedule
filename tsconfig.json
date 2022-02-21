@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"module": "es6",
+		"module": "commonjs",
 		"esModuleInterop": true,
 		"target": "es5",
 		"moduleResolution": "node",
@@ -11,9 +11,14 @@
 		"typeRoots": [
 			"node_modules/@types"
 		],
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": "./src",
 	},
 	"lib": [
 		"es2015"
+	],
+	"include": [
+		"./src/"
 	]
 }
