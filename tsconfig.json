@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"module": "es6",
+		"esModuleInterop": true,
+		"target": "es5",
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"jsx": "react",
+		"outDir": "dist",
+		"resolveJsonModule": true,
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"skipLibCheck": true
+	},
+	"lib": [
+		"es2015"
+	]
+}
