@@ -12,6 +12,7 @@
   "author": "Armond Willingham",
   "license": "ISC",
   "devDependencies": {
+    "@types/moment": "^2.13.0",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@types/react-router-dom": "^5.3.2",
@@ -33,6 +34,8 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
     "react": "^17.0.2",
     "react-jss": "^10.9.0",
     "react-router-dom": "^5.3.0"
