@@ -16,16 +16,13 @@ module.exports = {
 				exclude: /node_modules/,
 			},
 			{
-				test: /\.css$/,
-				use: [
-					'style-loader',
-					'css-loader',
-				],
+				test: /\.(scss|css)$/,
+				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 		],
 	},
 	resolve: {
-		extensions: ['.tsx', '.ts', '.js'],
+		extensions: ['.tsx', '.ts', '.js', '.scss'],
 		fallback: {
 			'fs': false,
 		},

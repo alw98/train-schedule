@@ -15,7 +15,7 @@ export const BasePage: React.FC<BasePageProps> = (props: BasePageProps) => {
 	return (
 		<>
 			<Header toggleTheme={props.toggleTheme} />
-			<div className={styles.container}>{props.children}</div>
+			<div className={styles.pageContainer}>{props.children}</div>
 			{/* <Footer /> */}
 		</>
 	);
@@ -23,7 +23,9 @@ export const BasePage: React.FC<BasePageProps> = (props: BasePageProps) => {
 
 const useStyles = createUseStyles(
 	(theme: Theme): Styles => ({
-		container: {
+		pageContainer: {
+			display: 'flex',
+			justifyContent: 'center',
 			backgroundColor: theme.backgroundColor.primary,
 			color: theme.textColor.primary,
 			marginTop: '3rem',

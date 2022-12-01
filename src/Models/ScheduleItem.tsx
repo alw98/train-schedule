@@ -1,6 +1,6 @@
-import { Duration } from 'moment';
+import { FormattedDuration } from './FormattedDuration';
 
 export interface ScheduleItem {
 	name: string;
-	duration: Duration;
+	duration: FormattedDuration;
 }
